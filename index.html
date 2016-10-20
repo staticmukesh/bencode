@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bencode - Mukesh Sharma</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript">
+		function bdecode() {
+			var text = document.getElementById("encoded").value;
+			var result = decode(0, text).result;
+			document.getElementById("decoded").innerHTML = JSON.stringify(result); 
+		}
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="page-header">
+			  <h1>bencode</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div >
+	  			<textarea class="form-control" rows="2" id="encoded" placeholder="Enter text to decode"></textarea>
+	  			<button class="btn btn-primary" style="margin: 10px 0px;" onclick="bdecode()"">Decode</button>
+			</div>
+			<code id="decoded">
+			</code>
+		</div>
+		<hr/>
+		<div class="row" style="text-align: center;">
+			<p>&copy; 2016 - <a href="http://staticmukesh.com">staticmukesh.com</a></p>
+		</div>
+	
+	</div>	
+</body>
+</html>
